@@ -1,0 +1,8 @@
+chromadb>=0.5.0
+requests>=2.31.0
+feedparser>=6.0.11
+pydantic>=2.7.0
+python-dotenv>=1.0.1
+
+# Install hermes-agent from source:
+# pip install git+https://github.com/NousResearch/hermes-agent.git

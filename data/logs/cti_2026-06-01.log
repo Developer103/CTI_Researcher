@@ -1,0 +1,615 @@
+──────────────────────────────────────────────────────
+[2026-06-01 06:00:01] CTI Pipeline started
+2026-06-01T06:00:01 INFO     cti.main — ============================================================
+2026-06-01T06:00:01 INFO     cti.main — CTI Pipeline starting — 2026-06-01 (date range: (legacy 24h) → )
+2026-06-01T06:00:01 INFO     cti.main — ============================================================
+2026-06-01T06:00:01 INFO     cti.main — SQLite dedup store: 647 items already processed
+2026-06-01T06:00:02 INFO     ingestor — Feed 'BleepingComputer': 1 items (last 24h)
+2026-06-01T06:00:02 INFO     ingestor — Feed 'TheHackerNews': 1 items (last 24h)
+2026-06-01T06:00:03 INFO     ingestor — Feed 'SecurityWeek': 0 items (last 24h)
+2026-06-01T06:00:04 INFO     ingestor — Feed 'DarkReading': 2 items (last 24h)
+2026-06-01T06:00:04 INFO     ingestor — Feed 'KrebsOnSecurity': 0 items (last 24h)
+2026-06-01T06:00:05 INFO     ingestor — Feed 'SANS ISC': 1 items (last 24h)
+2026-06-01T06:00:06 INFO     ingestor — Feed 'Full Disclosure': 0 items (last 24h)
+2026-06-01T06:00:07 INFO     ingestor — Feed 'Exploit-DB': 0 items (last 24h)
+2026-06-01T06:00:07 INFO     ingestor — Feed 'Malware Traffic Analysis': 0 items (last 24h)
+2026-06-01T06:00:08 INFO     ingestor — Feed 'Malwarebytes Labs': 0 items (last 24h)
+2026-06-01T06:00:08 INFO     ingestor — Feed 'Cisco Talos': 0 items (last 24h)
+2026-06-01T06:00:10 INFO     ingestor — Feed 'ESET WeLiveSecurity': 0 items (last 24h)
+2026-06-01T06:00:12 INFO     ingestor — Feed 'Kaspersky SecureList': 0 items (last 24h)
+2026-06-01T06:00:13 INFO     ingestor — Feed 'Microsoft Security Blog': 0 items (last 24h)
+2026-06-01T06:00:15 INFO     ingestor — Feed 'Mandiant Blog': 0 items (last 24h)
+2026-06-01T06:00:15 INFO     ingestor — Feed 'Feodo Tracker': 0 items (last 24h)
+2026-06-01T06:00:15 INFO     ingestor — Feed 'URLhaus': 25 items (last 24h)
+2026-06-01T06:00:16 INFO     ingestor — Feed 'ThreatFox': 26 items (last 24h)
+2026-06-01T06:00:16 INFO     ingestor — Total unique items fetched across all feeds: 56
+2026-06-01T06:00:16 INFO     rag_manager — ChromaDB collection 'cti_intel' opened — current size: 301 documents
+2026-06-01T06:00:16 INFO     cti.main — ChromaDB knowledge base: 301 documents before this run
+2026-06-01T06:00:16 INFO     cti.main — Triaging: WP Maps Pro bug exploited to create admin accounts on WordPress sites
+2026-06-01T06:00:16 INFO     run_agent — Loaded environment variables from /home/kei/.hermes/.env
+2026-06-01T06:00:16 INFO     run_agent — OpenAI client created (agent_init, shared=True) thread=ThreadPoolExecutor-1_0:136003144578752 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:00:17 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   WP Maps Pro bug exploited to create admin accounts on...'
+2026-06-01T06:00:17 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-1 (_call):135997295675072 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:00:32 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-1 (_call):135997295675072 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:00:32 INFO     agent.conversation_loop — API call #1: model=qwen3.5:35b provider=unknown in=4194 out=225 total=4419 latency=15.4s
+2026-06-01T06:00:36 INFO     agent.tool_executor — tool execute_code completed (3.82s, 2928 chars)
+2026-06-01T06:00:36 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-5 (_call):136003402507968 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:00:39 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-5 (_call):136003402507968 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:00:39 INFO     agent.conversation_loop — API call #2: model=qwen3.5:35b provider=unknown in=5042 out=82 total=5124 latency=3.5s
+2026-06-01T06:00:39 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=378 session=20260601_060016_31d832
+2026-06-01T06:00:40 INFO     rag_manager — RAG insert OK — doc 18a7ec53-8cbf-4b32-b562-93cb84355a03 | collection now 302 documents
+2026-06-01T06:00:40 INFO     cti.main — ✓ Valuable [CRITICAL] WP Maps Pro bug exploited to create admin accounts on WordPr | CVE: none | RAG: stored (18a7ec53…)
+2026-06-01T06:00:40 INFO     cti.main — Triaging: Dutch Authorities Dismantle Botnet Linked to 17 Million Infected Devices
+2026-06-01T06:00:40 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   Dutch Authorities Dismantle Botnet Linked to 17 Milli...'
+2026-06-01T06:00:40 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-6 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:00:52 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-6 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:00:52 INFO     agent.conversation_loop — API call #3: model=qwen3.5:35b provider=unknown in=4334 out=445 total=4779 latency=12.5s
+2026-06-01T06:00:52 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=432 session=20260601_060016_31d832
+2026-06-01T06:00:52 INFO     cti.main — Triaging: YARA-X 1.17.0 Release, (Sun, May 31st)
+2026-06-01T06:00:52 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   YARA-X 1.17.0 Release, (Sun, May 31st) Source:  SANS ...'
+2026-06-01T06:00:52 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-7 (_call):136003469649600 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:01 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-7 (_call):136003469649600 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:01 INFO     agent.conversation_loop — API call #4: model=qwen3.5:35b provider=unknown in=4180 out=286 total=4466 latency=8.3s
+2026-06-01T06:01:01 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=353 session=20260601_060016_31d832
+2026-06-01T06:01:01 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 32-bit, elf, mips, Mozi
+2026-06-01T06:01:01 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 32-bit, elf, mips, Mozi ...'
+2026-06-01T06:01:01 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-8 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:14 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-8 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:14 INFO     agent.conversation_loop — API call #5: model=qwen3.5:35b provider=unknown in=4198 out=460 total=4658 latency=12.8s
+2026-06-01T06:01:14 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=418 session=20260601_060016_31d832
+2026-06-01T06:01:14 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — 32-bit, elf, mips, Mozi
+
+URLhaus reports …
+2026-06-01T06:01:14 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 32-bit, elf, mips, Mozi | CVE: none | RAG: duplicate skipped
+2026-06-01T06:01:14 INFO     cti.main — Triaging: [URLhaus] Live malware URL — Mozi
+2026-06-01T06:01:14 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — Mozi Source:  URLhaus UR...'
+2026-06-01T06:01:14 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-9 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:25 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-9 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:25 INFO     agent.conversation_loop — API call #6: model=qwen3.5:35b provider=unknown in=4122 out=372 total=4494 latency=10.5s
+2026-06-01T06:01:25 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=385 session=20260601_060016_31d832
+2026-06-01T06:01:25 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — Mozi
+
+URLhaus identified active malware s…
+2026-06-01T06:01:25 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — Mozi | CVE: none | RAG: duplicate skipped
+2026-06-01T06:01:25 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:01:25 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:01:25 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-10 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:38 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-10 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:38 INFO     agent.conversation_loop — API call #7: model=qwen3.5:35b provider=unknown in=4120 out=467 total=4587 latency=13.0s
+2026-06-01T06:01:38 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=363 session=20260601_060016_31d832
+2026-06-01T06:01:38 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — none
+
+URLhaus has identified a new live m…
+2026-06-01T06:01:38 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — none | CVE: none | RAG: duplicate skipped
+2026-06-01T06:01:38 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:01:38 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:01:38 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-11 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:53 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-11 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:01:53 INFO     agent.conversation_loop — API call #8: model=qwen3.5:35b provider=unknown in=4120 out=552 total=4672 latency=15.1s
+2026-06-01T06:01:53 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=365 session=20260601_060016_31d832
+2026-06-01T06:01:53 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — none
+
+URLhaus identified a live malware d…
+2026-06-01T06:01:53 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — none | CVE: none | RAG: duplicate skipped
+2026-06-01T06:01:53 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:01:53 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:01:53 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-12 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:02:07 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-12 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:02:07 INFO     agent.conversation_loop — API call #9: model=qwen3.5:35b provider=unknown in=4119 out=483 total=4602 latency=13.4s
+2026-06-01T06:02:10 INFO     agent.tool_executor — tool execute_code completed (3.62s, 2251 chars)
+2026-06-01T06:02:10 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-16 (_call):136003461256896 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:02:14 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-16 (_call):136003461256896 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:02:14 INFO     agent.conversation_loop — API call #10: model=qwen3.5:35b provider=unknown in=4929 out=102 total=5031 latency=3.9s
+2026-06-01T06:02:14 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=359 session=20260601_060016_31d832
+2026-06-01T06:02:14 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — none
+
+URLhaus identified a new live malwa…
+2026-06-01T06:02:14 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — none | CVE: none | RAG: duplicate skipped
+2026-06-01T06:02:14 INFO     cti.main — Triaging: [URLhaus] Live malware URL — mirai
+2026-06-01T06:02:15 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — mirai Source:  URLhaus U...'
+2026-06-01T06:02:15 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-17 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:02:37 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-17 (_call):136003452864192 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:02:37 INFO     agent.conversation_loop — API call #11: model=qwen3.5:35b provider=unknown in=4208 out=840 total=5048 latency=22.5s
+2026-06-01T06:02:37 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=1047 session=20260601_060016_31d832
+2026-06-01T06:02:37 INFO     cti.main — Triaging: [URLhaus] Live malware URL — elf, mirai, ua-wget
+2026-06-01T06:02:37 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — elf, mirai, ua-wget Sour...'
+2026-06-01T06:02:37 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-18 (_call):136003444471488 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:02:48 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-18 (_call):136003444471488 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:02:48 INFO     agent.conversation_loop — API call #12: model=qwen3.5:35b provider=unknown in=4207 out=393 total=4600 latency=11.2s
+2026-06-01T06:02:48 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=543 session=20260601_060016_31d832
+2026-06-01T06:02:49 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — elf, mirai, ua-wget
+
+URLhaus identified a…
+2026-06-01T06:02:49 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — elf, mirai, ua-wget | CVE: none | RAG: duplicate skipped
+2026-06-01T06:02:49 INFO     cti.main — Triaging: [URLhaus] Live malware URL — Amadey, c2-monitor-auto, dropped-by-amadey
+2026-06-01T06:02:49 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — Amadey, c2-monitor-auto,...'
+2026-06-01T06:02:49 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-19 (_call):136003444471488 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:01 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-19 (_call):136003444471488 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:01 INFO     agent.conversation_loop — API call #13: model=qwen3.5:35b provider=unknown in=4229 out=433 total=4662 latency=12.1s
+2026-06-01T06:03:01 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=536 session=20260601_060016_31d832
+2026-06-01T06:03:01 INFO     rag_manager — RAG insert OK — doc 64f610df-1705-4ffd-a8ab-900bfae0e809 | collection now 303 documents
+2026-06-01T06:03:01 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — Amadey, c2-monitor-auto, droppe | CVE: none | RAG: stored (64f610df…)
+2026-06-01T06:03:01 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:03:01 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:03:01 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-20 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:18 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-20 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:18 INFO     agent.conversation_loop — API call #14: model=qwen3.5:35b provider=unknown in=4105 out=615 total=4720 latency=16.7s
+2026-06-01T06:03:18 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=341 session=20260601_060016_31d832
+2026-06-01T06:03:18 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — none
+
+New active malware distribution end…
+2026-06-01T06:03:18 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — none | CVE: none | RAG: duplicate skipped
+2026-06-01T06:03:18 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:03:18 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:03:18 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-21 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:32 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-21 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:32 INFO     agent.conversation_loop — API call #15: model=qwen3.5:35b provider=unknown in=4105 out=488 total=4593 latency=13.5s
+2026-06-01T06:03:36 INFO     agent.tool_executor — tool execute_code completed (3.82s, 4834 chars)
+2026-06-01T06:03:36 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-25 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:41 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-25 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:41 INFO     agent.conversation_loop — API call #16: model=qwen3.5:35b provider=unknown in=5837 out=126 total=5963 latency=5.0s
+2026-06-01T06:03:41 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=457 session=20260601_060016_31d832
+2026-06-01T06:03:41 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — none
+
+URLhaus has identified a live malwa…
+2026-06-01T06:03:41 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — none | CVE: none | RAG: duplicate skipped
+2026-06-01T06:03:41 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:03:41 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:03:41 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-26 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:46 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-26 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:03:46 INFO     agent.conversation_loop — API call #17: model=qwen3.5:35b provider=unknown in=4120 out=167 total=4287 latency=5.3s
+2026-06-01T06:03:50 INFO     agent.tool_executor — tool execute_code completed (3.62s, 2294 chars)
+2026-06-01T06:03:50 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-30 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:00 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-30 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:00 INFO     agent.conversation_loop — API call #18: model=qwen3.5:35b provider=unknown in=4962 out=331 total=5293 latency=9.9s
+2026-06-01T06:04:00 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=1307 session=20260601_060016_31d832
+2026-06-01T06:04:00 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 45-198-224-8, elf, mirai, ua-wget
+2026-06-01T06:04:00 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 45-198-224-8, elf, mirai...'
+2026-06-01T06:04:00 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-31 (_call):136003476993728 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:15 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-31 (_call):136003476993728 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:15 INFO     agent.conversation_loop — API call #19: model=qwen3.5:35b provider=unknown in=4240 out=529 total=4769 latency=14.5s
+2026-06-01T06:04:15 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=415 session=20260601_060016_31d832
+2026-06-01T06:04:15 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — 45-198-224-8, elf, mirai, ua-wget
+
+URLhau…
+2026-06-01T06:04:15 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 45-198-224-8, elf, mirai, ua-wg | CVE: none | RAG: duplicate skipped
+2026-06-01T06:04:15 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 102-220-160-85, exe, ua-wget
+2026-06-01T06:04:15 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 102-220-160-85, exe, ua-...'
+2026-06-01T06:04:15 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-32 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:21 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-32 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:21 INFO     agent.conversation_loop — API call #20: model=qwen3.5:35b provider=unknown in=4279 out=198 total=4477 latency=6.0s
+2026-06-01T06:04:24 INFO     agent.tool_executor — tool execute_code completed (3.63s, 2473 chars)
+2026-06-01T06:04:24 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-36 (_call):136003485386432 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:29 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-36 (_call):136003485386432 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:29 INFO     agent.conversation_loop — API call #21: model=qwen3.5:35b provider=unknown in=5167 out=120 total=5287 latency=4.5s
+2026-06-01T06:04:29 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=431 session=20260601_060016_31d832
+2026-06-01T06:04:29 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — 102-220-160-85, exe, ua-wget
+
+New live ma…
+2026-06-01T06:04:29 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 102-220-160-85, exe, ua-wget | CVE: none | RAG: duplicate skipped
+2026-06-01T06:04:29 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 193-17-183-8, exe, ua-wget
+2026-06-01T06:04:29 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 193-17-183-8, exe, ua-wg...'
+2026-06-01T06:04:29 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-37 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:41 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-37 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:41 INFO     agent.conversation_loop — API call #22: model=qwen3.5:35b provider=unknown in=4273 out=417 total=4690 latency=11.6s
+2026-06-01T06:04:41 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=346 session=20260601_060016_31d832
+2026-06-01T06:04:41 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — 193-17-183-8, exe, ua-wget
+
+Live malware …
+2026-06-01T06:04:41 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 193-17-183-8, exe, ua-wget | CVE: none | RAG: duplicate skipped
+2026-06-01T06:04:41 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 195-96-132-13, mirai, sh, ua-wget
+2026-06-01T06:04:41 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 195-96-132-13, mirai, sh...'
+2026-06-01T06:04:41 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-38 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:47 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-38 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:47 INFO     agent.conversation_loop — API call #23: model=qwen3.5:35b provider=unknown in=4218 out=186 total=4404 latency=5.8s
+2026-06-01T06:04:51 INFO     agent.tool_executor — tool execute_code completed (3.62s, 2401 chars)
+2026-06-01T06:04:51 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-42 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:55 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-42 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:04:55 INFO     agent.conversation_loop — API call #24: model=qwen3.5:35b provider=unknown in=5076 out=132 total=5208 latency=4.7s
+2026-06-01T06:04:55 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=484 session=20260601_060016_31d832
+2026-06-01T06:04:55 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — 195-96-132-13, mirai, sh, ua-wget
+
+URLhau…
+2026-06-01T06:04:55 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 195-96-132-13, mirai, sh, ua-wg | CVE: none | RAG: duplicate skipped
+2026-06-01T06:04:55 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 103-83-87-122, DDoSAgent, elf, ua-wget
+2026-06-01T06:04:55 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 103-83-87-122, DDoSAgent...'
+2026-06-01T06:04:55 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-43 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:12 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-43 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:12 INFO     agent.conversation_loop — API call #25: model=qwen3.5:35b provider=unknown in=4247 out=606 total=4853 latency=16.5s
+2026-06-01T06:05:12 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=458 session=20260601_060016_31d832
+2026-06-01T06:05:12 INFO     rag_manager — RAG insert OK — doc ec86c701-f452-4aad-a159-dda9f77f85af | collection now 304 documents
+2026-06-01T06:05:12 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 103-83-87-122, DDoSAgent, elf,  | CVE: none | RAG: stored (ec86c701…)
+2026-06-01T06:05:12 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 45-194-92-29, elf, mirai, ua-wget
+2026-06-01T06:05:12 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 45-194-92-29, elf, mirai...'
+2026-06-01T06:05:12 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-44 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:18 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-44 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:18 INFO     agent.conversation_loop — API call #26: model=qwen3.5:35b provider=unknown in=4239 out=194 total=4433 latency=5.9s
+2026-06-01T06:05:22 INFO     agent.tool_executor — tool execute_code completed (3.62s, 2309 chars)
+2026-06-01T06:05:22 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-48 (_call):136003485386432 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:27 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-48 (_call):136003485386432 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:27 INFO     agent.conversation_loop — API call #27: model=qwen3.5:35b provider=unknown in=5074 out=124 total=5198 latency=4.6s
+2026-06-01T06:05:27 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=421 session=20260601_060016_31d832
+2026-06-01T06:05:27 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — 45-194-92-29, elf, mirai, ua-wget
+
+URLhau…
+2026-06-01T06:05:27 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 45-194-92-29, elf, mirai, ua-wg | CVE: none | RAG: duplicate skipped
+2026-06-01T06:05:27 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 23-146-240-108, connectwise, exe, ua-wget
+2026-06-01T06:05:27 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 23-146-240-108, connectw...'
+2026-06-01T06:05:27 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-49 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:45 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-49 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:45 INFO     agent.conversation_loop — API call #28: model=qwen3.5:35b provider=unknown in=4258 out=666 total=4924 latency=18.0s
+2026-06-01T06:05:45 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=532 session=20260601_060016_31d832
+2026-06-01T06:05:45 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — 23-146-240-108, connectwise, exe, ua-wget…
+2026-06-01T06:05:45 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 23-146-240-108, connectwise, ex | CVE: none | RAG: duplicate skipped
+2026-06-01T06:05:45 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 95-164-6-120, elf, ua-wget
+2026-06-01T06:05:45 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 95-164-6-120, elf, ua-wg...'
+2026-06-01T06:05:45 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-50 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:59 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-50 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:05:59 INFO     agent.conversation_loop — API call #29: model=qwen3.5:35b provider=unknown in=4222 out=484 total=4706 latency=13.5s
+2026-06-01T06:05:59 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=596 session=20260601_060016_31d832
+2026-06-01T06:05:59 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — 95-164-6-120, elf, ua-wget
+
+New live malw…
+2026-06-01T06:05:59 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 95-164-6-120, elf, ua-wget | CVE: none | RAG: duplicate skipped
+2026-06-01T06:05:59 INFO     cti.main — Triaging: [URLhaus] Live malware URL — 176-65-139-224, elf, mirai, ua-wget
+2026-06-01T06:05:59 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — 176-65-139-224, elf, mir...'
+2026-06-01T06:05:59 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-51 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:11 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-51 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:11 INFO     agent.conversation_loop — API call #30: model=qwen3.5:35b provider=unknown in=4236 out=427 total=4663 latency=12.0s
+2026-06-01T06:06:11 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=512 session=20260601_060016_31d832
+2026-06-01T06:06:11 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [URLhaus] Live malware URL — 176-65-139-224, elf, mirai, ua-wget
+
+URLh…
+2026-06-01T06:06:11 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — 176-65-139-224, elf, mirai, ua- | CVE: none | RAG: duplicate skipped
+2026-06-01T06:06:11 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:06:11 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:06:11 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-52 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:25 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-52 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:25 INFO     agent.conversation_loop — API call #31: model=qwen3.5:35b provider=unknown in=4131 out=490 total=4621 latency=13.6s
+2026-06-01T06:06:28 INFO     agent.tool_executor — tool execute_code completed (3.62s, 2939 chars)
+2026-06-01T06:06:28 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-56 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:40 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-56 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:40 INFO     agent.conversation_loop — API call #32: model=qwen3.5:35b provider=unknown in=5261 out=407 total=5668 latency=11.9s
+2026-06-01T06:06:40 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=427 session=20260601_060016_31d832
+2026-06-01T06:06:41 INFO     rag_manager — RAG insert OK — doc 8eb12811-5973-42c7-8587-d9c75c877516 | collection now 305 documents
+2026-06-01T06:06:41 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — none | CVE: none | RAG: stored (8eb12811…)
+2026-06-01T06:06:41 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:06:41 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:06:41 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-57 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:51 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-57 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:51 INFO     agent.conversation_loop — API call #33: model=qwen3.5:35b provider=unknown in=4193 out=342 total=4535 latency=9.8s
+2026-06-01T06:06:54 INFO     agent.tool_executor — tool execute_code completed (3.63s, 2684 chars)
+2026-06-01T06:06:54 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-61 (_call):136003485386432 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:59 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-61 (_call):136003485386432 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:06:59 INFO     agent.conversation_loop — API call #34: model=qwen3.5:35b provider=unknown in=5103 out=127 total=5230 latency=4.7s
+2026-06-01T06:06:59 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=513 session=20260601_060016_31d832
+2026-06-01T06:06:59 INFO     rag_manager — RAG insert OK — doc 232c6f7d-e07b-4a12-907a-af102085de37 | collection now 306 documents
+2026-06-01T06:06:59 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — none | CVE: none | RAG: stored (232c6f7d…)
+2026-06-01T06:06:59 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:06:59 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:06:59 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-62 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:04 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-62 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:04 INFO     agent.conversation_loop — API call #35: model=qwen3.5:35b provider=unknown in=4156 out=153 total=4309 latency=4.9s
+2026-06-01T06:07:08 INFO     agent.tool_executor — tool execute_code completed (3.82s, 2071 chars)
+2026-06-01T06:07:08 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-66 (_call):136003493779136 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:20 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-66 (_call):136003493779136 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:20 INFO     agent.conversation_loop — API call #36: model=qwen3.5:35b provider=unknown in=4905 out=427 total=5332 latency=12.3s
+2026-06-01T06:07:20 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=1779 session=20260601_060016_31d832
+2026-06-01T06:07:20 INFO     cti.main — Triaging: [URLhaus] Live malware URL — none
+2026-06-01T06:07:20 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — none Source:  URLhaus UR...'
+2026-06-01T06:07:20 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-67 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:26 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-67 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:26 INFO     agent.conversation_loop — API call #37: model=qwen3.5:35b provider=unknown in=4155 out=174 total=4329 latency=5.4s
+2026-06-01T06:07:29 INFO     agent.tool_executor — tool execute_code completed (3.63s, 2438 chars)
+2026-06-01T06:07:29 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-71 (_call):136003485386432 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:35 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-71 (_call):136003485386432 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:35 INFO     agent.conversation_loop — API call #38: model=qwen3.5:35b provider=unknown in=5079 out=179 total=5258 latency=6.0s
+2026-06-01T06:07:35 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=662 session=20260601_060016_31d832
+2026-06-01T06:07:35 INFO     cti.main — Triaging: [URLhaus] Live malware URL — donutloader
+2026-06-01T06:07:36 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [URLhaus] Live malware URL — donutloader Source:  URL...'
+2026-06-01T06:07:36 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-72 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:43 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-72 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:43 INFO     agent.conversation_loop — API call #39: model=qwen3.5:35b provider=unknown in=4132 out=233 total=4365 latency=6.9s
+2026-06-01T06:07:46 INFO     agent.tool_executor — tool execute_code completed (3.82s, 4216 chars)
+2026-06-01T06:07:46 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-76 (_call):136003476993728 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:51 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-76 (_call):136003476993728 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:07:51 INFO     agent.conversation_loop — API call #40: model=qwen3.5:35b provider=unknown in=5478 out=134 total=5612 latency=5.0s
+2026-06-01T06:07:51 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=627 session=20260601_060016_31d832
+2026-06-01T06:07:52 INFO     rag_manager — RAG insert OK — doc 2ebf4fa8-6f33-4641-9e55-d8b77aa05069 | collection now 307 documents
+2026-06-01T06:07:52 INFO     cti.main — ✓ Valuable [HIGH] [URLhaus] Live malware URL — donutloader | CVE: none | RAG: stored (2ebf4fa8…)
+2026-06-01T06:07:52 INFO     cti.main — Triaging: [ThreatFox] ClearFake — new domain IOC (payload_delivery)
+2026-06-01T06:07:52 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] ClearFake — new domain IOC (payload_deliv...'
+2026-06-01T06:07:52 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-77 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:05 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-77 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:05 INFO     agent.conversation_loop — API call #41: model=qwen3.5:35b provider=unknown in=4161 out=459 total=4620 latency=12.8s
+2026-06-01T06:08:05 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=384 session=20260601_060016_31d832
+2026-06-01T06:08:05 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] ClearFake — new domain IOC (payload_delivery)
+
+New domain …
+2026-06-01T06:08:05 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] ClearFake — new domain IOC (payload_delivery) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:08:05 INFO     cti.main — Triaging: [ThreatFox] Remcos — new ip:port IOC (botnet_cc)
+2026-06-01T06:08:05 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Remcos — new ip:port IOC (botnet_cc) Sour...'
+2026-06-01T06:08:05 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-78 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:18 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-78 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:18 INFO     agent.conversation_loop — API call #42: model=qwen3.5:35b provider=unknown in=4311 out=457 total=4768 latency=12.8s
+2026-06-01T06:08:18 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=392 session=20260601_060016_31d832
+2026-06-01T06:08:18 INFO     cti.main — Triaging: [ThreatFox] Unknown malware — new domain IOC (botnet_cc)
+2026-06-01T06:08:18 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Unknown malware — new domain IOC (botnet_...'
+2026-06-01T06:08:18 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-79 (_call):136003493779136 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:32 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-79 (_call):136003493779136 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:32 INFO     agent.conversation_loop — API call #43: model=qwen3.5:35b provider=unknown in=4244 out=530 total=4774 latency=14.5s
+2026-06-01T06:08:32 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=403 session=20260601_060016_31d832
+2026-06-01T06:08:32 INFO     rag_manager — RAG insert OK — doc 7da400ad-a892-4e75-94fc-349d3578272e | collection now 308 documents
+2026-06-01T06:08:32 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Unknown malware — new domain IOC (botnet_cc) | CVE: none | RAG: stored (7da400ad…)
+2026-06-01T06:08:32 INFO     cti.main — Triaging: [ThreatFox] VShell — new ip:port IOC (botnet_cc)
+2026-06-01T06:08:33 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] VShell — new ip:port IOC (botnet_cc) Sour...'
+2026-06-01T06:08:33 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-80 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:45 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-80 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:45 INFO     agent.conversation_loop — API call #44: model=qwen3.5:35b provider=unknown in=4318 out=450 total=4768 latency=12.6s
+2026-06-01T06:08:45 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=455 session=20260601_060016_31d832
+2026-06-01T06:08:45 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] VShell — new ip:port IOC (botnet_cc)
+
+New active command-a…
+2026-06-01T06:08:45 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] VShell — new ip:port IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:08:45 INFO     cti.main — Triaging: [ThreatFox] Havoc — new ip:port IOC (botnet_cc)
+2026-06-01T06:08:46 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Havoc — new ip:port IOC (botnet_cc) Sourc...'
+2026-06-01T06:08:46 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-81 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:58 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-81 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:08:58 INFO     agent.conversation_loop — API call #45: model=qwen3.5:35b provider=unknown in=4305 out=453 total=4758 latency=12.6s
+2026-06-01T06:08:58 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=424 session=20260601_060016_31d832
+2026-06-01T06:08:58 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] Havoc — new ip:port IOC (botnet_cc)
+
+New active command-an…
+2026-06-01T06:08:58 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Havoc — new ip:port IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:08:58 INFO     cti.main — Triaging: [ThreatFox] DCRat — new ip:port IOC (botnet_cc)
+2026-06-01T06:08:59 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] DCRat — new ip:port IOC (botnet_cc) Sourc...'
+2026-06-01T06:08:59 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-82 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:09:12 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-82 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:09:12 INFO     agent.conversation_loop — API call #46: model=qwen3.5:35b provider=unknown in=4338 out=468 total=4806 latency=13.1s
+2026-06-01T06:09:12 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=443 session=20260601_060016_31d832
+2026-06-01T06:09:12 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] DCRat — new ip:port IOC (botnet_cc)
+
+ThreatFox has publish…
+2026-06-01T06:09:12 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] DCRat — new ip:port IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:09:12 INFO     cti.main — Triaging: [ThreatFox] AsyncRAT — new ip:port IOC (botnet_cc)
+2026-06-01T06:09:12 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] AsyncRAT — new ip:port IOC (botnet_cc) So...'
+2026-06-01T06:09:12 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-83 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:09:28 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-83 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:09:28 INFO     agent.conversation_loop — API call #47: model=qwen3.5:35b provider=unknown in=4295 out=583 total=4878 latency=16.0s
+2026-06-01T06:09:28 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=430 session=20260601_060016_31d832
+2026-06-01T06:09:28 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] AsyncRAT — new ip:port IOC (botnet_cc)
+
+New AsyncRAT botne…
+2026-06-01T06:09:28 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] AsyncRAT — new ip:port IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:09:28 INFO     cti.main — Triaging: [ThreatFox] Unknown malware — new ip:port IOC (botnet_cc)
+2026-06-01T06:09:28 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Unknown malware — new ip:port IOC (botnet...'
+2026-06-01T06:09:28 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-84 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:09:42 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-84 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:09:42 INFO     agent.conversation_loop — API call #48: model=qwen3.5:35b provider=unknown in=4285 out=510 total=4795 latency=14.1s
+2026-06-01T06:09:46 INFO     agent.tool_executor — tool execute_code completed (3.62s, 2666 chars)
+2026-06-01T06:09:46 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-88 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:09:51 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-88 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:09:51 INFO     agent.conversation_loop — API call #49: model=qwen3.5:35b provider=unknown in=5233 out=147 total=5380 latency=5.3s
+2026-06-01T06:09:51 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=511 session=20260601_060016_31d832
+2026-06-01T06:09:52 INFO     rag_manager — RAG insert OK — doc 2e1e53c7-2d1d-44db-9382-cf1753809378 | collection now 309 documents
+2026-06-01T06:09:52 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Unknown malware — new ip:port IOC (botnet_cc) | CVE: none | RAG: stored (2e1e53c7…)
+2026-06-01T06:09:52 INFO     cti.main — Triaging: [ThreatFox] Unknown malware — new url IOC (payload_delivery)
+2026-06-01T06:09:52 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Unknown malware — new url IOC (payload_de...'
+2026-06-01T06:09:52 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-89 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:00 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-89 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:00 INFO     agent.conversation_loop — API call #50: model=qwen3.5:35b provider=unknown in=4242 out=302 total=4544 latency=8.7s
+2026-06-01T06:10:04 INFO     agent.tool_executor — tool execute_code completed (3.63s, 2613 chars)
+2026-06-01T06:10:04 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-93 (_call):136003493779136 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:08 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-93 (_call):136003493779136 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:08 INFO     agent.conversation_loop — API call #51: model=qwen3.5:35b provider=unknown in=5055 out=114 total=5169 latency=4.4s
+2026-06-01T06:10:08 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=479 session=20260601_060016_31d832
+2026-06-01T06:10:09 INFO     rag_manager — RAG insert OK — doc eda43d31-e43c-4aa9-bf04-35c8268403f7 | collection now 310 documents
+2026-06-01T06:10:09 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Unknown malware — new url IOC (payload_delivery) | CVE: none | RAG: stored (eda43d31…)
+2026-06-01T06:10:09 INFO     cti.main — Triaging: [ThreatFox] Nanocore RAT — new domain IOC (botnet_cc)
+2026-06-01T06:10:09 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Nanocore RAT — new domain IOC (botnet_cc)...'
+2026-06-01T06:10:09 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-94 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:17 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-94 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:17 INFO     agent.conversation_loop — API call #52: model=qwen3.5:35b provider=unknown in=4244 out=268 total=4512 latency=8.0s
+2026-06-01T06:10:20 INFO     agent.tool_executor — tool execute_code completed (3.62s, 2548 chars)
+2026-06-01T06:10:20 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-98 (_call):136003476993728 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:25 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-98 (_call):136003476993728 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:25 INFO     agent.conversation_loop — API call #53: model=qwen3.5:35b provider=unknown in=5110 out=112 total=5222 latency=4.3s
+2026-06-01T06:10:25 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=407 session=20260601_060016_31d832
+2026-06-01T06:10:25 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] Nanocore RAT — new domain IOC (botnet_cc)
+
+New Nanocore RA…
+2026-06-01T06:10:25 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Nanocore RAT — new domain IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:10:25 INFO     cti.main — Triaging: [ThreatFox] Cobalt Strike — new ip:port IOC (botnet_cc)
+2026-06-01T06:10:25 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Cobalt Strike — new ip:port IOC (botnet_c...'
+2026-06-01T06:10:25 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-99 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:34 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-99 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:34 INFO     agent.conversation_loop — API call #54: model=qwen3.5:35b provider=unknown in=4303 out=323 total=4626 latency=9.4s
+2026-06-01T06:10:34 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=372 session=20260601_060016_31d832
+2026-06-01T06:10:35 INFO     rag_manager — RAG insert OK — doc 3c4f65ce-ed69-48e9-9ac6-02a640525bd9 | collection now 311 documents
+2026-06-01T06:10:35 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Cobalt Strike — new ip:port IOC (botnet_cc) | CVE: none | RAG: stored (3c4f65ce…)
+2026-06-01T06:10:35 INFO     cti.main — Triaging: [ThreatFox] ValleyRAT — new ip:port IOC (botnet_cc)
+2026-06-01T06:10:35 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] ValleyRAT — new ip:port IOC (botnet_cc) S...'
+2026-06-01T06:10:35 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-100 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:47 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-100 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:47 INFO     agent.conversation_loop — API call #55: model=qwen3.5:35b provider=unknown in=4254 out=448 total=4702 latency=12.5s
+2026-06-01T06:10:47 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=440 session=20260601_060016_31d832
+2026-06-01T06:10:47 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] ValleyRAT — new ip:port IOC (botnet_cc)
+
+New active botnet…
+2026-06-01T06:10:47 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] ValleyRAT — new ip:port IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:10:47 INFO     cti.main — Triaging: [ThreatFox] pupy — new ip:port IOC (botnet_cc)
+2026-06-01T06:10:48 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] pupy — new ip:port IOC (botnet_cc) Source...'
+2026-06-01T06:10:48 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-101 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:58 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-101 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:10:58 INFO     agent.conversation_loop — API call #56: model=qwen3.5:35b provider=unknown in=4320 out=381 total=4701 latency=10.8s
+2026-06-01T06:11:02 INFO     agent.tool_executor — tool execute_code completed (3.63s, 2737 chars)
+2026-06-01T06:11:02 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-105 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:08 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-105 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:08 INFO     agent.conversation_loop — API call #57: model=qwen3.5:35b provider=unknown in=5277 out=159 total=5436 latency=5.6s
+2026-06-01T06:11:08 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=508 session=20260601_060016_31d832
+2026-06-01T06:11:08 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] pupy — new ip:port IOC (botnet_cc)
+
+New active command-and…
+2026-06-01T06:11:08 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] pupy — new ip:port IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:11:08 INFO     cti.main — Triaging: [ThreatFox] StrelaStealer — new domain IOC (payload_delivery)
+2026-06-01T06:11:08 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] StrelaStealer — new domain IOC (payload_d...'
+2026-06-01T06:11:08 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-106 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:20 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-106 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:20 INFO     agent.conversation_loop — API call #58: model=qwen3.5:35b provider=unknown in=4188 out=435 total=4623 latency=12.3s
+2026-06-01T06:11:20 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=464 session=20260601_060016_31d832
+2026-06-01T06:11:20 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] StrelaStealer — new domain IOC (payload_delivery)
+
+New act…
+2026-06-01T06:11:20 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] StrelaStealer — new domain IOC (payload_delivery | CVE: none | RAG: duplicate skipped
+2026-06-01T06:11:20 INFO     cti.main — Triaging: [ThreatFox] Lumma Stealer — new domain IOC (botnet_cc)
+2026-06-01T06:11:20 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Lumma Stealer — new domain IOC (botnet_cc...'
+2026-06-01T06:11:20 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-107 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:26 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-107 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:26 INFO     agent.conversation_loop — API call #59: model=qwen3.5:35b provider=unknown in=4185 out=175 total=4360 latency=5.5s
+2026-06-01T06:11:30 INFO     agent.tool_executor — tool execute_code completed (3.62s, 2661 chars)
+2026-06-01T06:11:30 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-111 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:34 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-111 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:34 INFO     agent.conversation_loop — API call #60: model=qwen3.5:35b provider=unknown in=5015 out=107 total=5122 latency=4.1s
+2026-06-01T06:11:34 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=416 session=20260601_060016_31d832
+2026-06-01T06:11:34 INFO     rag_manager — RAG insert OK — doc 91bef7be-1ce0-4ed4-b013-db6eef9231ee | collection now 312 documents
+2026-06-01T06:11:34 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Lumma Stealer — new domain IOC (botnet_cc) | CVE: none | RAG: stored (91bef7be…)
+2026-06-01T06:11:34 INFO     cti.main — Triaging: [ThreatFox] Unknown Stealer — new ip:port IOC (botnet_cc)
+2026-06-01T06:11:34 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Unknown Stealer — new ip:port IOC (botnet...'
+2026-06-01T06:11:34 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-112 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:42 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-112 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:42 INFO     agent.conversation_loop — API call #61: model=qwen3.5:35b provider=unknown in=4380 out=289 total=4669 latency=8.5s
+2026-06-01T06:11:46 INFO     agent.tool_executor — tool execute_code completed (3.63s, 2825 chars)
+2026-06-01T06:11:46 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-116 (_call):136003493779136 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:51 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-116 (_call):136003493779136 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:11:51 INFO     agent.conversation_loop — API call #62: model=qwen3.5:35b provider=unknown in=5337 out=133 total=5470 latency=4.9s
+2026-06-01T06:11:51 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=462 session=20260601_060016_31d832
+2026-06-01T06:11:51 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] Unknown Stealer — new ip:port IOC (botnet_cc)
+
+New active …
+2026-06-01T06:11:51 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Unknown Stealer — new ip:port IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:11:51 INFO     cti.main — Triaging: [ThreatFox] Unknown Stealer — new url IOC (botnet_cc)
+2026-06-01T06:11:51 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Unknown Stealer — new url IOC (botnet_cc)...'
+2026-06-01T06:11:51 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-117 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:01 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-117 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:01 INFO     agent.conversation_loop — API call #63: model=qwen3.5:35b provider=unknown in=4320 out=338 total=4658 latency=9.8s
+2026-06-01T06:12:05 INFO     agent.tool_executor — tool execute_code completed (3.83s, 3526 chars)
+2026-06-01T06:12:05 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-121 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:10 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-121 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:10 INFO     agent.conversation_loop — API call #64: model=qwen3.5:35b provider=unknown in=5555 out=129 total=5684 latency=5.0s
+2026-06-01T06:12:10 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=478 session=20260601_060016_31d832
+2026-06-01T06:12:10 INFO     rag_manager — RAG insert OK — doc 8766f847-89f4-4942-90b1-c1af565d121b | collection now 313 documents
+2026-06-01T06:12:10 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Unknown Stealer — new url IOC (botnet_cc) | CVE: none | RAG: stored (8766f847…)
+2026-06-01T06:12:10 INFO     cti.main — Triaging: [ThreatFox] RedTail — new ip:port IOC (payload_delivery)
+2026-06-01T06:12:10 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] RedTail — new ip:port IOC (payload_delive...'
+2026-06-01T06:12:10 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-122 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:26 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-122 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:26 INFO     agent.conversation_loop — API call #65: model=qwen3.5:35b provider=unknown in=4302 out=550 total=4852 latency=15.2s
+2026-06-01T06:12:26 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=520 session=20260601_060016_31d832
+2026-06-01T06:12:26 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] RedTail — new ip:port IOC (payload_delivery)
+
+New RedTail …
+2026-06-01T06:12:26 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] RedTail — new ip:port IOC (payload_delivery) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:12:26 INFO     cti.main — Triaging: [ThreatFox] Mirai — new domain IOC (botnet_cc)
+2026-06-01T06:12:26 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Mirai — new domain IOC (botnet_cc) Source...'
+2026-06-01T06:12:26 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-123 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:39 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-123 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:39 INFO     agent.conversation_loop — API call #66: model=qwen3.5:35b provider=unknown in=4241 out=477 total=4718 latency=13.3s
+2026-06-01T06:12:39 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=462 session=20260601_060016_31d832
+2026-06-01T06:12:39 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] Mirai — new domain IOC (botnet_cc)
+
+New active Mirai/Katan…
+2026-06-01T06:12:39 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Mirai — new domain IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:12:39 INFO     cti.main — Triaging: [ThreatFox] Mirai — new url IOC (payload_delivery)
+2026-06-01T06:12:39 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Mirai — new url IOC (payload_delivery) So...'
+2026-06-01T06:12:39 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-124 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:51 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-124 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:12:51 INFO     agent.conversation_loop — API call #67: model=qwen3.5:35b provider=unknown in=4249 out=423 total=4672 latency=11.7s
+2026-06-01T06:12:51 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=435 session=20260601_060016_31d832
+2026-06-01T06:12:51 INFO     rag_manager — RAG insert OK — doc 1b72f63f-6602-474d-bd80-036034a81410 | collection now 314 documents
+2026-06-01T06:12:51 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Mirai — new url IOC (payload_delivery) | CVE: none | RAG: stored (1b72f63f…)
+2026-06-01T06:12:51 INFO     cti.main — Triaging: [ThreatFox] IClickFix — new domain IOC (botnet_cc)
+2026-06-01T06:12:52 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] IClickFix — new domain IOC (botnet_cc) So...'
+2026-06-01T06:12:52 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-125 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:04 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-125 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:04 INFO     agent.conversation_loop — API call #68: model=qwen3.5:35b provider=unknown in=4246 out=436 total=4682 latency=12.1s
+2026-06-01T06:13:04 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=373 session=20260601_060016_31d832
+2026-06-01T06:13:04 INFO     rag_manager — RAG insert OK — doc 5e8e45b6-e0dc-4ca1-af1c-2e22bff20156 | collection now 315 documents
+2026-06-01T06:13:04 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] IClickFix — new domain IOC (botnet_cc) | CVE: none | RAG: stored (5e8e45b6…)
+2026-06-01T06:13:04 INFO     cti.main — Triaging: [ThreatFox] Mirai — new ip:port IOC (botnet_cc)
+2026-06-01T06:13:04 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Mirai — new ip:port IOC (botnet_cc) Sourc...'
+2026-06-01T06:13:04 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-126 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:15 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-126 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:15 INFO     agent.conversation_loop — API call #69: model=qwen3.5:35b provider=unknown in=4271 out=366 total=4637 latency=10.5s
+2026-06-01T06:13:15 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=513 session=20260601_060016_31d832
+2026-06-01T06:13:15 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] Mirai — new ip:port IOC (botnet_cc)
+
+Active Mirai/Katana b…
+2026-06-01T06:13:15 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Mirai — new ip:port IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:13:15 INFO     cti.main — Triaging: [ThreatFox] Stealc — new ip:port IOC (botnet_cc)
+2026-06-01T06:13:15 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] Stealc — new ip:port IOC (botnet_cc) Sour...'
+2026-06-01T06:13:15 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-127 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:28 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-127 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:28 INFO     agent.conversation_loop — API call #70: model=qwen3.5:35b provider=unknown in=4306 out=456 total=4762 latency=12.9s
+2026-06-01T06:13:28 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=1/90 budget=1/90 tool_turns=0 last_msg_role=assistant response_len=471 session=20260601_060016_31d832
+2026-06-01T06:13:28 INFO     rag_manager — RAG insert SKIPPED — near-duplicate already in store: [ThreatFox] Stealc — new ip:port IOC (botnet_cc)
+
+New active command-a…
+2026-06-01T06:13:28 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] Stealc — new ip:port IOC (botnet_cc) | CVE: none | RAG: duplicate skipped
+2026-06-01T06:13:28 INFO     cti.main — Triaging: [ThreatFox] BeaverTail — new sha256_hash IOC (payload)
+2026-06-01T06:13:28 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] BeaverTail — new sha256_hash IOC (payload...'
+2026-06-01T06:13:28 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-128 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:37 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-128 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:37 INFO     agent.conversation_loop — API call #71: model=qwen3.5:35b provider=unknown in=4404 out=320 total=4724 latency=9.2s
+2026-06-01T06:13:41 INFO     agent.tool_executor — tool execute_code completed (3.63s, 2735 chars)
+2026-06-01T06:13:41 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-132 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:45 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-132 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:45 INFO     agent.conversation_loop — API call #72: model=qwen3.5:35b provider=unknown in=5509 out=95 total=5604 latency=4.0s
+2026-06-01T06:13:45 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=364 session=20260601_060016_31d832
+2026-06-01T06:13:45 INFO     cti.main — Triaging: [ThreatFox] SectopRAT — new ip:port IOC (botnet_cc)
+2026-06-01T06:13:45 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] SectopRAT — new ip:port IOC (botnet_cc) S...'
+2026-06-01T06:13:45 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-133 (_call):136003476993728 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:50 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-133 (_call):136003476993728 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:50 INFO     agent.conversation_loop — API call #73: model=qwen3.5:35b provider=unknown in=4324 out=148 total=4472 latency=4.8s
+2026-06-01T06:13:53 INFO     agent.tool_executor — tool execute_code completed (3.62s, 2656 chars)
+2026-06-01T06:13:53 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-137 (_call):136003502171840 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:59 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-137 (_call):136003502171840 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:13:59 INFO     agent.conversation_loop — API call #74: model=qwen3.5:35b provider=unknown in=5240 out=145 total=5385 latency=5.2s
+2026-06-01T06:13:59 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=490 session=20260601_060016_31d832
+2026-06-01T06:13:59 INFO     rag_manager — RAG insert OK — doc 33e37fb8-49c8-47c7-a3cc-31501dba6656 | collection now 316 documents
+2026-06-01T06:13:59 INFO     cti.main — ✓ Valuable [HIGH] [ThreatFox] SectopRAT — new ip:port IOC (botnet_cc) | CVE: none | RAG: stored (33e37fb8…)
+2026-06-01T06:13:59 INFO     cti.main — Triaging: [ThreatFox] BlankGrabber — new domain IOC (payload_delivery)
+2026-06-01T06:13:59 INFO     agent.conversation_loop — conversation turn: session=20260601_060016_31d832 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg='ITEM TO EVALUATE: Title:   [ThreatFox] BlankGrabber — new domain IOC (payload_de...'
+2026-06-01T06:13:59 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-138 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:14:05 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-138 (_call):136003451815616 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:14:05 INFO     agent.conversation_loop — API call #75: model=qwen3.5:35b provider=unknown in=4182 out=193 total=4375 latency=5.9s
+2026-06-01T06:14:09 INFO     agent.tool_executor — tool execute_code completed (3.63s, 2845 chars)
+2026-06-01T06:14:09 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-142 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:14:13 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-142 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:14:13 INFO     agent.conversation_loop — API call #76: model=qwen3.5:35b provider=unknown in=5027 out=122 total=5149 latency=4.5s
+2026-06-01T06:14:13 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=2/90 budget=1/90 tool_turns=1 last_msg_role=assistant response_len=505 session=20260601_060016_31d832
+2026-06-01T06:14:13 INFO     rag_manager — RAG insert OK — doc cd75e84f-675e-4d03-b983-bdd4ff858c59 | collection now 317 documents
+2026-06-01T06:14:13 INFO     cti.main — ✓ Valuable [MEDIUM] [ThreatFox] BlankGrabber — new domain IOC (payload_delivery) | CVE: none | RAG: stored (cd75e84f…)
+2026-06-01T06:14:13 INFO     cti.main — Triage complete — valuable: 46 | low-value: 8 | triage-failed: 0 | already-seen (SQLite): 2 | RAG dup skipped: 30
+2026-06-01T06:14:13 INFO     cti.main — ChromaDB knowledge base: 301 → 317 documents (+16 new)
+2026-06-01T06:14:13 INFO     cti.main — Generating Daily Cyber Threat Brief (46 findings)…
+2026-06-01T06:14:13 INFO     run_agent — OpenAI client created (agent_init, shared=True) thread=MainThread:136004459050816 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:14:13 INFO     agent.conversation_loop — conversation turn: session=20260601_061413_2e6326 model=qwen3.5:35b provider=unknown platform=unknown history=0 msg="Today's date: 2026-06-01 Knowledge base size: 317 documents  Here are today's 46..."
+2026-06-01T06:14:13 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-143 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:14:25 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-143 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:14:25 INFO     agent.conversation_loop — API call #1: model=qwen3.5:35b provider=unknown in=10154 out=305 total=10459 latency=11.9s
+2026-06-01T06:14:29 WARNING  agent.tool_executor — Tool execute_code returned error (3.23s): {"status": "error", "output": "\n--- stderr ---\n  File \"/tmp/hermes_sandbox__m4ol098/script.py\", line 17\n    results3 = query_similar \"ClickFix malvertising campaigns historical\", n_results=5)\n
+2026-06-01T06:14:29 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-147 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:14:36 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-147 (_call):136003468601024 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:14:36 INFO     agent.conversation_loop — API call #2: model=qwen3.5:35b provider=unknown in=10579 out=260 total=10839 latency=7.9s
+2026-06-01T06:14:40 INFO     agent.tool_executor — tool execute_code completed (4.03s, 7631 chars)
+2026-06-01T06:14:41 INFO     run_agent — OpenAI client created (chat_completion_stream_request, shared=False) thread=Thread-151 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:16:43 INFO     run_agent — OpenAI client closed (stream_request_complete, shared=False, tcp_force_closed=0) thread=Thread-151 (_call):136003460208320 provider= base_url=http://localhost:11434/v1 model=qwen3.5:35b
+2026-06-01T06:16:43 INFO     agent.conversation_loop — API call #3: model=qwen3.5:35b provider=unknown in=12892 out=4603 total=17495 latency=122.7s
+2026-06-01T06:16:43 INFO     agent.conversation_loop — Turn ended: reason=text_response(finish_reason=stop) model=qwen3.5:35b api_calls=3/90 budget=1/90 tool_turns=2 last_msg_role=assistant response_len=13445 session=20260601_061413_2e6326
+2026-06-01T06:16:43 INFO     cti.main — Report generated (13445 chars)
+2026-06-01T06:16:43 INFO     cti.main — Report saved to /home/kei/llm_vault/hermes_qwen_cti/data/reports/brief_2026-06-01.md
+2026-06-01T06:16:43 INFO     notifier — Posting 8 message(s) to Discord channel 1507293382509072474 via bot REST API
+2026-06-01T06:16:52 INFO     notifier — Report delivered to Discord via bot REST API.
+2026-06-01T06:16:52 INFO     cti.main — Daily brief delivered to Discord.
+2026-06-01T06:16:52 INFO     cti.main — CTI Pipeline finished.
+[2026-06-01 06:16:52] CTI Pipeline finished
